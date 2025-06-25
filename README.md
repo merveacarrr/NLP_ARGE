@@ -20,10 +20,7 @@ homework2/
 │   │   ├── vektorleştirme_karsilastirma.png
 │   │   └── wordcloud.png
 │   └── 📂 data/                     # İşlenmiş veriler
-│       └── nlp_analiz_sonuclari.csv
-├── 📂 docs/                         # Dokümantasyon
-│   └── README.md                 # Detaylı dokümantasyon
-├── requirements.txt              # Python bağımlılıkları
+│       └── nlp_analiz_sonuclari.csv              # Detaylı dokümantasyon
 └── README.md                     # Bu dosya
 ```
 
