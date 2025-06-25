@@ -2,27 +2,6 @@
 
 Bu proje, Kaggle News Category Dataset kullanarak haber başlıkları üzerinde kapsamlı NLP (Doğal Dil İşleme) analizi gerçekleştirir.
 
-## Proje Yapısı
-
-```
-homework2/
-├── 📂 src/                          # Kaynak kodlar
-│   └── nlp_arge.py                  # Ana analiz scripti
-├── 📂 data/                         # Veri dosyaları
-│   └── News_Category_Dataset.json    # Kaggle haber veri seti
-├── 📂 results/                      # Analiz sonuçları
-│   ├── 📂 figures/                  # Görselleştirmeler
-│   │   ├── kategori_dagilimi.png
-│   │   ├── baslik_uzunluk_dagilimi.png
-│   │   ├── duygu_analizi_sonuclari.png
-│   │   ├── kategori_duygu_analizi.png
-│   │   ├── topic_modeling_dagilimi.png
-│   │   ├── vektorleştirme_karsilastirma.png
-│   │   └── wordcloud.png
-│   └── 📂 data/                     # İşlenmiş veriler
-│       └── nlp_analiz_sonuclari.csv              # Detaylı dokümantasyon
-└── README.md                     # Bu dosya
-```
 
 ## 🚀 Kurulum ve Çalıştırma
 
