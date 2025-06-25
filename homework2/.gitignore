@@ -128,14 +128,14 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Data files
-*.csv
-*.json
-*.xlsx
-*.xls
-*.parquet
-*.h5
-*.hdf5
+# Data files (commented out to allow project data files)
+# *.csv
+# *.json
+# *.xlsx
+# *.xls
+# *.parquet
+# *.h5
+# *.hdf5
 
 # Large data files (uncomment if needed)
 # data/raw/
