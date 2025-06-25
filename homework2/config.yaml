@@ -1,0 +1,106 @@
+# NLP Haber Başlıkları Analizi - Konfigürasyon Dosyası
+
+# Veri Yolları
+paths:
+  data_dir: "data"
+  results_dir: "results"
+  figures_dir: "results/figures"
+  data_results_dir: "results/data"
+  input_file: "News_Category_Dataset.json"
+  output_file: "nlp_analiz_sonuclari.csv"
+
+# Vektörleştirme Parametreleri
+vectorization:
+  count_vectorizer:
+    max_features: 1000
+    min_df: 5
+    max_df: 0.7
+    ngram_range: [1, 2]
+  
+  tfidf_vectorizer:
+    max_features: 1000
+    min_df: 5
+    max_df: 0.7
+    ngram_range: [1, 2]
+    sublinear_tf: true
+
+# Topic Modeling Parametreleri
+topic_modeling:
+  n_topics: 10
+  n_top_words: 8
+  lda:
+    random_state: 42
+    max_iter: 20
+    learning_method: "batch"
+  
+  nmf:
+    random_state: 42
+    max_iter: 200
+
+# Duygu Analizi Parametreleri
+sentiment_analysis:
+  textblob:
+    positive_threshold: 0.1
+    negative_threshold: -0.1
+  
+  vader:
+    positive_threshold: 0.05
+    negative_threshold: -0.05
+
+# Görselleştirme Parametreleri
+visualization:
+  figure_size: [12, 8]
+  dpi: 300
+  style: "seaborn-v0_8"
+  font_size: 10
+  
+  colors:
+    primary: "#2E8B57"
+    secondary: "#FF6B6B"
+    tertiary: "#4682B4"
+    neutral: "#808080"
+
+# Performans Parametreleri
+performance:
+  batch_size: 1000
+  chunk_size: 5000
+  memory_limit: "4GB"
+
+# NLP Ön İşleme Parametreleri
+preprocessing:
+  min_word_length: 2
+  use_pos_filter: true
+  allowed_pos_tags:
+    - "NN"    # Noun, singular or mass
+    - "NNS"   # Noun, plural
+    - "NNP"   # Proper noun, singular
+    - "NNPS"  # Proper noun, plural
+    - "JJ"    # Adjective
+    - "JJR"   # Adjective, comparative
+    - "JJS"   # Adjective, superlative
+    - "VB"    # Verb, base form
+    - "VBD"   # Verb, past tense
+    - "VBG"   # Verb, gerund or present participle
+    - "VBN"   # Verb, past participle
+    - "VBP"   # Verb, non-3rd person singular present
+    - "VBZ"   # Verb, 3rd person singular present
+
+# Logging Parametreleri
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "nlp_analysis.log"
+
+# Çıktı Formatları
+output:
+  save_figures: true
+  save_data: true
+  figure_format: "png"
+  data_format: "csv"
+  encoding: "utf-8"
+
+# Hata Yönetimi
+error_handling:
+  continue_on_error: true
+  log_errors: true
+  max_retries: 3 
